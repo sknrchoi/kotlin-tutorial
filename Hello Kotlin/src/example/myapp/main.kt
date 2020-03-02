@@ -1,5 +1,7 @@
 package example.myapp
 
+import example.myapp.decor.makeDecorations
+
 fun buildAquarium() {
     val aquarium1 = Aquarium()
     aquarium1.printSize()
@@ -41,5 +43,6 @@ fun makeFish() {
 
 fun main() {
     //buildAquarium()
-    makeFish()
+    //makeFish()
+    makeDecorations()
 }
