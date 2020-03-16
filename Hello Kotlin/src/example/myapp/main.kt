@@ -50,4 +50,18 @@ fun main() {
     println(Direction.EAST.name)
     println(Direction.EAST.ordinal)
     println(Direction.EAST.degrees)
+
+    println("Does it have spaces?".hasSpaces())
+
+    // extension
+    val plant = GreenLeafyPlant(size = 10)
+    plant.print()
+    println("\n")
+    val aquariumPlant: AquariumPlant = plant
+    aquariumPlant.print()
+
+    println(aquariumPlant.isGreen)
+
+    val plant2: AquariumPlant? = null
+    plant2.pull()
 }
