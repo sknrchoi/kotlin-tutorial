@@ -49,9 +49,26 @@ fun labels() {
             if (i > 10) break@outerLoop // breaks to outher loop
         }
     }
+    println()
 }
+
+/**
+ * lambda with argument
+ */
+fun lambdas() {
+    println("===== lambdas =====")
+    val waterFilter = {dirty: Int -> dirty / 2}
+    println(waterFilter(30))
+
+    data class Fish(val name: String)
+    val myFish = listOf(Fish("Filipper"), Fish("Moby Dick"), Fish("Dory"))
+    println(myFish.filter{it.name.contains("i")})
+    println(myFish.filter{it.name.contains("i")}.joinToString(", "){it.name})
+}
+
 
 fun main() {
     testAnnotations()
     labels()
+    lambdas()
 }
